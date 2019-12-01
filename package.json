@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "NODE_ENV=development webpack-dev-server --config=./webpack/index.babel.js",
-    "build": "NODE_ENV=production webpack --config=./webpack/index.babel.js",
+    "build": "rimraf ./dist && NODE_ENV=production webpack --config=./webpack/index.babel.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -32,6 +32,7 @@
     "mini-css-extract-plugin": "^0.8.0",
     "postcss-loader": "^3.0.0",
     "postcss-nested": "^4.2.1",
+    "rimraf": "^3.0.0",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10",
     "webpack-dev-server": "^3.9.0"
