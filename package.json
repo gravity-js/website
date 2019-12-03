@@ -38,6 +38,6 @@
     "webpack-dev-server": "^3.9.0"
   },
   "dependencies": {
-    "@gravity-js/browser": "file:../browser"
+    "@gravity-js/client": "file:../client"
   }
 }

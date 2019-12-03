@@ -1,4 +1,4 @@
-import { View } from '@gravity-js/browser'
+import { View } from '@gravity-js/client'
 
 import styles from './styles'
 

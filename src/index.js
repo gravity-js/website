@@ -1,4 +1,4 @@
-import { mount } from '@gravity-js/browser'
+import { mount } from '@gravity-js/client'
 
 import Root from './Root'
 
