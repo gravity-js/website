@@ -1,15 +1,18 @@
-import normalizePath from '../utils/normalizePath'
+import getAbsolutePath from '../utils/getAbsolutePath'
 
 
 class History {
   canUseNative = Boolean(window.history)
 
   go = (path, state={}) => {
-    // TODO make getAbsPath instead normalizePath
-    let [ normalPath, isAbsolute ] = normalizePath(path)
-    if (!isAbsolute) path = `${window.location.pathname}/${normalPath}`
-    console.log(path)
-    window.history.pushState(state, '', path)
+    const absolutePath = getAbsolutePath(path)
+    const href = window.location.origin + absolutePath
+    if (this.canUseNative) {
+      window.history.pushState(state, '', href)
+    } else {
+      window.location.href = href
+    }
+    return absolutePath
   }
 
   onChange = callback => {
