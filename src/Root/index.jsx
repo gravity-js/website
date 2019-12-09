@@ -1,4 +1,4 @@
-import { View } from '@gravity-js/client'
+import Gravity, { View } from '@gravity-js/client'
 
 import { History, Router } from './Router'
 
@@ -6,10 +6,10 @@ import styles from './styles'
 
 
 class Root extends View {
-  onCreate = () => {
-    const history = new History()
-    history.go('docs')
-  }
+  // onCreate = () => {
+    // const history = new History()
+    // history.go('docs')
+  // }
 
   // TODO render () {} does not work with match
   render = () => {

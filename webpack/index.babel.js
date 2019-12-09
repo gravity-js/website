@@ -21,6 +21,10 @@ export default {
     extensions: ['.js', '.jsx', '.pcss'],
   },
 
+  output : {
+    publicPath: '/',
+  },
+
   module: {
     rules: [
       {
