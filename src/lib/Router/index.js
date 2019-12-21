@@ -1,8 +1,8 @@
-import History from './History'
 import Router from './Router'
+import Link from './Link'
 
 
 export {
-  History,
   Router,
+  Link,
 }
